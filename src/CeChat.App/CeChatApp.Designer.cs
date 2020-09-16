@@ -1,4 +1,4 @@
-﻿namespace CeChat
+﻿namespace CeChat.App
 {
     partial class CeChatApp
     {

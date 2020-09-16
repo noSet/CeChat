@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CeChat.Properties
+namespace CeChat.App.Properties
 {
 
 

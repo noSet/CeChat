@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CeChat
+namespace CeChat.App
 {
     public partial class CeChatApp : Form
     {

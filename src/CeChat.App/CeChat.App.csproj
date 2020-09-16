@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29D26504-6DCC-43F8-9175-FAE15480E1C6}</ProjectGuid>
+    <ProjectGuid>{2AE4D26A-529C-47DB-99D0-4AD19D9EA749}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CeChat</RootNamespace>
-    <AssemblyName>CeChat</AssemblyName>
+    <RootNamespace>CeChat.App</RootNamespace>
+    <AssemblyName>CeChat.App</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
