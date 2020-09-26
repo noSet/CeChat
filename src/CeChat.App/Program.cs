@@ -1,8 +1,10 @@
-﻿using CeChat.Service;
+﻿using CeChat.Grains.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Orleans;
+using Orleans.Hosting;
+using Serilog;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,11 +26,30 @@ namespace CeChat.App
 
         public static IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<CeChatApp>();
-            services.AddTransient<ICeChatRoomService>(sp =>
+            services.AddLogging(builder =>
             {
-                // todo 创建远程对象
-                return null;
+                builder.AddSerilog(new LoggerConfiguration().WriteTo.File("log.txt").CreateLogger());
+            });
+
+            services.AddTransient<CeChatApp>();
+            services.AddTransient<IClusterClient>(sp =>
+            {
+                var looger = sp.GetRequiredService<ILogger<ClientBuilder>>();
+
+                var client = new ClientBuilder()
+                    .ConfigureApplicationParts(manager => manager.AddApplicationPart(typeof(ICeChatRoomGrain).Assembly).WithReferences())
+                    .UseLocalhostClustering()
+                    .AddSimpleMessageStreamProvider("SMS")
+                    .Build();
+
+                client.Connect(async error =>
+                {
+                    looger.LogError(error, error.Message);
+                    await Task.Delay(TimeSpan.FromSeconds(1));
+                    return true;
+                });
+
+                return client;
             });
 
             return services.BuildServiceProvider();

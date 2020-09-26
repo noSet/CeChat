@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeChat.Host", "CeChat.Host\CeChat.Host.csproj", "{741211C2-F00D-42BC-AA58-4ECA26DA6938}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeChat.Service", "CeChat.Service\CeChat.Service.csproj", "{17316EEB-81F4-494F-A7D8-A47E1D638373}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeChat.App", "CeChat.App\CeChat.App.csproj", "{2AE4D26A-529C-47DB-99D0-4AD19D9EA749}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeChat.Grains.Interfaces", "CeChat.Grains.Interfaces\CeChat.Grains.Interfaces.csproj", "{F19507A7-9A47-4F5A-BD9B-B11B4C6F1601}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeChat.Grains", "CeChat.Grains\CeChat.Grains.csproj", "{746EC66A-03D3-410C-9C5E-3DAE38D9E09D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeChat.Silo", "CeChat.Silo\CeChat.Silo.csproj", "{964839B1-B903-4F19-AA3D-CA40E3AEE062}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{741211C2-F00D-42BC-AA58-4ECA26DA6938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{741211C2-F00D-42BC-AA58-4ECA26DA6938}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{741211C2-F00D-42BC-AA58-4ECA26DA6938}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{741211C2-F00D-42BC-AA58-4ECA26DA6938}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17316EEB-81F4-494F-A7D8-A47E1D638373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17316EEB-81F4-494F-A7D8-A47E1D638373}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17316EEB-81F4-494F-A7D8-A47E1D638373}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17316EEB-81F4-494F-A7D8-A47E1D638373}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2AE4D26A-529C-47DB-99D0-4AD19D9EA749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2AE4D26A-529C-47DB-99D0-4AD19D9EA749}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AE4D26A-529C-47DB-99D0-4AD19D9EA749}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AE4D26A-529C-47DB-99D0-4AD19D9EA749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F19507A7-9A47-4F5A-BD9B-B11B4C6F1601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F19507A7-9A47-4F5A-BD9B-B11B4C6F1601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F19507A7-9A47-4F5A-BD9B-B11B4C6F1601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F19507A7-9A47-4F5A-BD9B-B11B4C6F1601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746EC66A-03D3-410C-9C5E-3DAE38D9E09D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746EC66A-03D3-410C-9C5E-3DAE38D9E09D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746EC66A-03D3-410C-9C5E-3DAE38D9E09D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746EC66A-03D3-410C-9C5E-3DAE38D9E09D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{964839B1-B903-4F19-AA3D-CA40E3AEE062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964839B1-B903-4F19-AA3D-CA40E3AEE062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964839B1-B903-4F19-AA3D-CA40E3AEE062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964839B1-B903-4F19-AA3D-CA40E3AEE062}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
